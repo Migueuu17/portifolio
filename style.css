@@ -230,3 +230,83 @@ body {
         margin-bottom: 10px;
         font-size: 16px;
       }
+
+      /* Responsividade para tablets */
+@media (max-width: 1024px) {
+  .galeria-projetos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-social {
+    bottom: 4rem;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 15px;
+  }
+
+  h1 {
+    font-size: 36px !important;
+  }
+
+  .intro-position span {
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  .galeria-projetos {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 10px 0;
+  }
+
+  .card-projeto {
+    max-width: 100%;
+    width: 90%;
+  }
+
+  #overlay {
+    padding: 20px;
+  }
+
+  .intro-social {
+    font-size: 2rem;
+    bottom: 2rem;
+  }
+
+  .intro-social li {
+    margin: 0 10px;
+  }
+
+  .intro-social img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  @media (max-width: 480px) {
+    .galeria-projetos {
+      padding: 0;
+    }
+  
+    .card-projeto {
+      width: 100%;
+    }
+  
+    .card-projeto img {
+      height: auto;
+    }
+  }
+}
