@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio de Análise de Dados</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function abrirModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+  
+    function fecharModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  
+    // Fechar modal ao clicar fora do conteúdo
+    window.onclick = function(event) {
+      const modais = document.querySelectorAll('.modal');
+      modais.forEach(modal => {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <section id="intro">
+    <div>
+      <h5>Olá, seja bem-vindo!</h5>
+      <h1 style="font-size: 64px; margin-top: 10px;">Eu sou <br> Miguel Victor</h1>
+      <p class="intro-position">
+        <span>Análise de Dados</span>
+        <span>Cientista de Dados</span>  
+      </p>
+      <a class="button" href="#sobre">Sobre mim</a>
+      <ul class="intro-social">
+        <li><a href="mailto:franklinfs390@gmail.com"><img src="./svg/mail-svgrepo-com.svg" alt=""></a></li>
+        <li><a href="https://github.com/franklin390"><img src="./svg/github-142-svgrepo-com.svg" alt=""></a></li>
+        <li><a href="https://www.linkedin.com/in/franklinfs390/"><img src="./svg/linkedin-svgrepo-com.svg" alt=""></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sobre" class="overlay-section">
+    <div id="overlay">
+      <h2>Sobre mim</h2>  
+      <p>Sou um(a) analista de dados apaixonado(a) por transformar dados em histórias visuais. Tenho experiência com ferramentas como Power BI, Tableau e Google Data Studio.</p>
+
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Power BI e Excel Avançado</li>
+        <li>Python (Pandas, Plotly, Streamlit)</li>
+        <li>SQL</li>
+      </ul>
+
+      <h2>Experiência Profissional</h2>
+      <div class="experiencia">
+        <h3>FC Car</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quaerat itaque, quidem, molestias eius est incidunt voluptates vitae, aperiam illum quos sit earum dicta autem ducimus ipsam corporis officiis ut!</p>
+      </div>
+      <div class="experiencia">
+        <h3>Pesquisa Acadêmica</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eveniet soluta ipsa nihil dicta iure error laudantium sint modi excepturi? Natus placeat quidem velit neque molestiae optio deserunt sapiente deleniti?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabalhos" class="overlay-section">
+    <div id="overlay">
+      <h2>Projetos</h2>
+      <div class="galeria-projetos">
+        <div class="card-projeto" onclick="abrirModal('modal1')">
+          <img src="./img/opuline.png" alt="Projeto 1">
+          <h3>Dashboard - Opuline</h3>
+        </div>
+        <div class="card-projeto" onclick="abrirModal('modal2')">
+          <img src="./img/metoro.png" alt="Projeto 2">
+          <h3>Dashboard - Meteora</h3>
+        </div>
+        <div class="card-projeto" onclick="abrirModal('modal3')">
+          <img src="projeto3.jpg" alt="Projeto 3">
+          <h3>Indicadores de RH</h3>
+        </div>
+      </div>
+              <!-- Modal 1 -->
+        <div class="modal" id="modal1">
+          <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal1')">&times;</span>
+            <h2>Dashboard - Opuline</h2>
+            <p>Projeto voltado à criação de gráficos, KPIs e indicadores com base em dados já tratados. O objetivo é entender quais visuais usar em cada tipo de análise e gerar um relatório final que una estética e informação relevante para o negócio.</p>
+            <img class="img-modal" src="./img/dash-opu.jpeg"  alt="">
+            <p class="tags-modal">Power BI | Visualização de Dados | Análise de Dados | Relatórios Gerenciais</p>
+          </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div class="modal" id="modal2">
+          <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal2')">&times;</span>
+            <h2>Dashboard - Meteora</h2>
+            <p>Criei um dashboard no Excel para visualizar as vendas da Meteora de forma clara e organizada. Ele mostra a porcentagem de vendas por categoria de produtos (acessórios, calçados e vestuário), as vendas mensais e informações importantes como o total de produtos, produtos vendidos e o total de vendas.
+
+              Utilizei gráficos de rosca, gráficos de barras e cartões, onde foi utilizado algumas formulas como somase, cont.valores para apresentar os dados de forma visual e intuitiva.</p>
+            <img class="img-modal" src="./img/dash-meteo.jpeg" alt="">
+            <p class="tags-modal">Excel Dashboard | Visualização de Dados | Análise de Vendas</p>
+          </div>
+          
+          
+        </div>
+
+        <!-- Modal 3 -->
+        <div class="modal" id="modal3">
+          <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal3')">&times;</span>
+            <h2 >Indicadores de RH</h2>
+            <p>Acompanhamento de turnover, absenteísmo e mais.</p>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <section id="certificados" class="overlay-section">
+    <div id="overlay">
+      <h2>Certificados</h2>
+
+      <div class="experiencia">
+        <h3>Graduação</h3>
+        <p><strong>Bacharelado em Ciência de Dados - Nome da Universidade</strong></p>
+        <p>Descrição do curso de graduação, disciplinas importantes, projetos desenvolvidos e data estimada de conclusão.</p>
+        <p><strong>Previsão de término:</strong> Dezembro de 2025</p>
+      </div>
+
+      <h3 style="margin-top: 40px;">Cursos</h3>
+
+      <div class="experiencia">
+        <h4>Formação em Análise de Dados - Alura</h4>
+        <p>Curso completo que aborda desde conceitos básicos de dados até práticas com ferramentas como Power BI e SQL.</p>
+        <a class="button" style="font-size: 12px; padding: 6px 10px;" href="#" target="_blank">Ver Certificado</a>
+      </div>
+
+      <div class="experiencia">
+        <h4>Python para Data Science - DataCamp</h4>
+        <p>Introdução à programação em Python com foco em análise e visualização de dados.</p>
+        <a class="button" style="font-size: 12px; padding: 6px 10px;" href="#" target="_blank">Ver Certificado</a>
+      </div>
+
+      <div class="experiencia">
+        <h4>Power BI Completo - Udemy</h4>
+        <p>Curso que ensina desde a conexão com diferentes fontes de dados até a criação de dashboards interativos.</p>
+        <a class="button" style="font-size: 12px; padding: 6px 10px;" href="#" target="_blank">Ver Certificado</a>
+      </div>
+
+      <div class="experiencia">
+        <h4>Excel Avançado - Coursera</h4>
+        <p>Aprendizado de funções avançadas, tabelas dinâmicas, dashboards e automações com VBA.</p>
+        <a class="button" style="font-size: 12px; padding: 6px 10px;" href="#" target="_blank">Ver Certificado</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 - Seu Nome</p>
+  </footer>
+</body>
+</html>
